@@ -19,15 +19,10 @@ export default function AuthLayout({
             <GridShape />
             <div className="flex flex-col items-center max-w-xs">
               <Link href="/" className="block mb-4">
-                <Image
-                  width={231}
-                  height={48}
-                  src="/images/logo/auth-logo.svg"
-                  alt="Logo"
-                />
+                <h1 className="text-4xl font-bold text-white">MACANX</h1>
               </Link>
               <p className="text-center text-gray-400 dark:text-white/60">
-                Free and Open-Source Tailwind CSS Admin Dashboard Template
+                Changing the way you manage your business
               </p>
             </div>
           </div>
