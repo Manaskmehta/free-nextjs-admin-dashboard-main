@@ -1,10 +1,5 @@
 import { httpClient } from './httpClient';
-
-export interface Category {
-  id: string;
-  name: string;
-  // Add other category fields if known
-}
+import { Category } from './category';
 
 export interface Design {
   id: string;
