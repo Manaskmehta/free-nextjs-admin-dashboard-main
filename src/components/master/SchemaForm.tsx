@@ -7,7 +7,7 @@ import TextArea from "@/components/form/input/TextArea";
 export interface FieldSchema {
   name: string;
   label: string;
-  type: "text" | "select" | "radio" | "textarea" | "file" | "date" | "number" | "password" | "email" | "checkbox";
+  type: string;
   options?: { label: string; value: any }[];
   required?: boolean;
   conditional?: (values: any) => boolean;

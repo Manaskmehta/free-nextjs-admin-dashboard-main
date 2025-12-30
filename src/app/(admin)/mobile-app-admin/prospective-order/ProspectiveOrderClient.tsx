@@ -2,6 +2,7 @@
 
 import React from "react";
 import MasterContainer from "@/components/master/MasterContainer";
+import { FieldSchema } from "@/components/master/SchemaForm";
 
 const columns = [
   { key: "userName", header: "User Name" },

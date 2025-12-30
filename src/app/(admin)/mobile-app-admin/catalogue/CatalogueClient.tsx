@@ -2,6 +2,7 @@
 
 import React from "react";
 import MasterContainer from "@/components/master/MasterContainer";
+import { FieldSchema } from "@/components/master/SchemaForm";
 
 // Matches screenshot columns
 const columns = [
@@ -16,31 +17,30 @@ const columns = [
 // Matches screenshot form fields
 const fields = [
   // Basic Information
-  { name: "name", label: "Catalogue Name", type: "text", placeholder: "Enter catalogue name", required: true },
+  { name: "name", label: "Catalogue Name", type: "text" as const, placeholder: "Enter catalogue name", required: true },
   { 
     name: "addProductBy", 
     label: "Add Products By", 
-    type: "select", 
+    type: "select" as const, 
     options: [{ value: "Barcode", label: "Barcode" }, { value: "Manual", label: "Manual" }],
-    defaultValue: "Barcode"
   },
   { 
     name: "showInApp", 
     label: "Show Catalogue in App", 
-    type: "radio", 
+    type: "radio" as const, 
     options: [{ value: "Yes", label: "Yes" }, { value: "No", label: "No" }]
   },
   {
       name: "setExpiry",
       label: "Set Expiry Date & Time",
-      type: "checkbox", // Representing the toggle
+      type: "checkbox" as const, // Representing the toggle
   },
   
   // Target Audience
   {
       name: "targetAudience",
       label: "Target Audience",
-      type: "radio",
+      type: "radio" as const,
       options: [
           { value: "All Users", label: "All Users (Visible to all registered and unregistered users)" },
           { value: "Registered Users", label: "Registered Users (Only visible to users who haven't registered yet)" }, // Text from screenshot
@@ -52,10 +52,10 @@ const fields = [
   {
       name: "productSearch",
       label: "Search Products",
-      type: "text",
+      type: "text" as const,
       placeholder: "Search by category or item code..."
   }
-];
+] as FieldSchema[];
 
 export default function CatalogueClient() {
   return (

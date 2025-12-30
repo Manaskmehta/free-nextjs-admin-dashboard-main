@@ -2,6 +2,7 @@
 
 import React from "react";
 import MasterContainer from "@/components/master/MasterContainer";
+import { FieldSchema } from "@/components/master/SchemaForm";
 
 const columns = [
   { key: "type", header: "Type" },
@@ -10,7 +11,7 @@ const columns = [
   { key: "lastUpdated", header: "Last Updated" },
 ];
 
-const fields = [
+const fields: FieldSchema[] = [
   {
     name: "type",
     label: "Branding Type",

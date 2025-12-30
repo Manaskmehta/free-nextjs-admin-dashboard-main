@@ -2,6 +2,7 @@
 
 import React from "react";
 import MasterContainer from "@/components/master/MasterContainer";
+import { FieldSchema } from "@/components/master/SchemaForm";
 
 const columns = [
   { key: "productName", header: "Product Name" },
@@ -32,7 +33,7 @@ const fields = [
       type: "select", 
       options: [{ value: "Active", label: "Active" }, { value: "Inactive", label: "Inactive" }] 
   },
-];
+] as FieldSchema[];
 
 export default function PrimaryAllocationClient() {
   return (
